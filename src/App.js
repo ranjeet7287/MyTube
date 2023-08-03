@@ -5,6 +5,7 @@ import Header from "./Component/Header";
 import SideBar from "./Component/SideBar";
 import { Provider } from "react-redux";
 import store from "./utils/Store";
+import Body from "./Component/Body";
 
 const AppLayout=()=>{
     return(
@@ -24,7 +25,7 @@ const AppRouter=createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<SideBar/>
+                element:<Body/>
             }
         ]
     }

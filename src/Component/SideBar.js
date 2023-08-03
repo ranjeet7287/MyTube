@@ -8,7 +8,7 @@ import youtbeicon from "../Assets/youtube.svg"
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
 import { toggleSideBar } from "../utils/AppSlice"
-import store from "../utils/Store"
+import Body from "./Body"
 
 const SideBar=()=>{
 
@@ -21,11 +21,13 @@ const SideBar=()=>{
 
     if(!isSideBarVisible) return null;
     return(
-        <div className='SideBar'>
-            <div className="flex gap-4 items-center p-4">
-                <img className="w-8" src={sidebar} onClick={()=>toggleHandler()}/>
-                <p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p>
-            </div>
+    <div className='SideBar'>
+
+        <div className="flex gap-4 items-center p-4">
+            <img className="w-8 cursor-pointer" src={sidebar} onClick={()=>toggleHandler()}/>
+            <p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p>
+        </div>
+
         <div>
             <ul className='text-xl p-2'>
                 <li className='p-2 hover:bg-white duration-300 hover:text-black hover:rounded-lg '>Home</li>
@@ -33,7 +35,9 @@ const SideBar=()=>{
                 <li className='p-2  hover:bg-white duration-300 hover:text-black hover:rounded-lg'>Subscriptions</li>
             </ul>
         </div>
+
         <hr/>
+
         <div>
             <ul className='text-xl p-2'>
                 <li className='p-2  hover:bg-white duration-300 hover:text-black hover:rounded-lg'>Library</li>
@@ -45,7 +49,9 @@ const SideBar=()=>{
                 <li className='p-2 hover:bg-white duration-300 hover:text-black hover:rounded-lg'>Watch Later</li>
             </ul>
         </div>
+
         <hr/>
+        
         <div>
             <ul className='text-xl p-2'>
                 <li className='p-2 hover:bg-white duration-300 hover:text-black hover:rounded-lg'>Trending</li>
