@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    .SideBar {
+        width: 15rem;
+        background-color: black;
+        color: white;
+        height: 100%;
+        position: fixed;
+        padding-bottom: 10rem;
+        overflow-y: scroll;
+    }
+    .SideBar::-webkit-scrollbar {
+        display: none; 
+    }
+}

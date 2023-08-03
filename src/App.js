@@ -2,13 +2,16 @@ import React from "react";
 import  ReactDOM  from "react-dom/client";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Header from "./Component/Header";
+import SideBar from "./Component/SideBar";
+import { Provider } from "react-redux";
+import store from "./utils/Store";
 
 const AppLayout=()=>{
     return(
-        <>
+        <Provider store={store}>
             <Header/>
             <Outlet/>
-        </>
+        </Provider>
     );
 }
 
@@ -17,7 +20,13 @@ const AppLayout=()=>{
 const AppRouter=createBrowserRouter([
     {
         path:'/',
-        element:<AppLayout/>
+        element:<AppLayout/>,
+        children:[
+            {
+                path:'/',
+                element:<SideBar/>
+            }
+        ]
     }
 ])
 

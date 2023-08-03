@@ -5,12 +5,20 @@ import Micicon from "../Assets/icons8.png"
 import Notfi from "../Assets/icons8-alert-1.png" 
 import videomakericon from "../Assets/icons8-video-50.png" 
 import usericon from "../Assets/icons8-user-48.png"
+import { useDispatch } from "react-redux"
+import { toggleSideBar } from "../utils/AppSlice"
 
 const Header=()=>{
+
+    const dispatch=useDispatch();
+    const toggleHandler=()=>{
+        dispatch(toggleSideBar());
+    }
+
     return(
-        <div className="bg-black text-white flex justify-between items-center p-4">
+        <div className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16">
             <div className="flex gap-4 items-center">
-                <img className="w-8" src={sidebar}/>
+                <img className="w-8" src={sidebar} onClick={()=>toggleHandler()}/>
                 <img className="w-10" src={youtbeicon}/>
                 <p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p>
             </div>
