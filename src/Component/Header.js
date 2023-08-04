@@ -16,7 +16,7 @@ const Header=()=>{
     }
 
     return(
-        <div className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16">
+        <div className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16 z-50">
             <div className="flex gap-4 items-center">
                 <img className="w-8 cursor-pointer" src={sidebar} onClick={()=>toggleHandler()}/>
                 <img className="w-10" src={youtbeicon}/>

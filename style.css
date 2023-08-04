@@ -15,4 +15,15 @@
     .SideBar::-webkit-scrollbar {
         display: none; 
     }
+    .ButtonList{
+        width: 100%;
+        position: fixed;
+        background-color: black;
+        overflow-x: auto;
+        white-space: nowrap;
+        z-index: 888;
+    }
+    .ButtonList::-webkit-scrollbar {
+        display: none; 
+    }
 }

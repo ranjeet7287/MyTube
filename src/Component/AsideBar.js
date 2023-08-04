@@ -11,8 +11,8 @@ const AsideBar=()=>{
         <div className='bg-black text-white p-4 h-full fixed flex flex-col items-center gap-16 text-sm w-[5.5rem]'>
             <div><Link to="/"><img className='w-6 cursor-pointer ml-2' src={home}/>Home</Link></div>
             <div><img className='w-6 cursor-pointer ml-2' src={shotrs}/>Shorts</div>
-            <div><img className='w-6 ml-7 cursor-pointer' src={Subscriptions}/>Subscriptions</div>
-            <div><img className='w-6 ml-1 cursor-pointer' src={Library}/>Library</div>
+            <div className='ml-3'><img className='w-6 ml-6 cursor-pointer' src={Subscriptions}/>Subscriptions</div>
+            <div><img className='w-6 ml-2 cursor-pointer' src={Library}/>Library</div>
             <div><img className='w-6 ml-5 cursor-pointer' src={download}/>Downnload</div>
         </div>
     );
