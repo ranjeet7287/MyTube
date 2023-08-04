@@ -7,6 +7,7 @@ import videomakericon from "../Assets/icons8-video-50.png"
 import usericon from "../Assets/icons8-user-48.png"
 import { useDispatch } from "react-redux"
 import { toggleSideBar } from "../utils/AppSlice"
+import { Link } from "react-router-dom"
 
 const Header=()=>{
 
@@ -19,8 +20,8 @@ const Header=()=>{
         <div className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16 z-50">
             <div className="flex gap-4 items-center">
                 <img className="w-8 cursor-pointer" src={sidebar} onClick={()=>toggleHandler()}/>
-                <img className="w-10" src={youtbeicon}/>
-                <p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p>
+                <Link to="/"><img className="w-10" src={youtbeicon}/></Link>
+                <Link to="/"><p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p></Link>
             </div>
             <div className="flex items-center gap-4">
                 <div className="flex border-2 border-zinc-800 rounded-xl p-[0.1rem] ">

@@ -1,11 +1,12 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import Header from "./Component/Header";
+import Header from "./Component/Header.js";
 import SideBar from "./Component/SideBar";
 import { Provider } from "react-redux";
 import store from "./utils/Store";
 import Body from "./Component/Body";
+import Watch from "./Component/Watch";
 
 const AppLayout=()=>{
     return(
@@ -26,6 +27,10 @@ const AppRouter=createBrowserRouter([
             {
                 path:'/',
                 element:<Body/>
+            },
+            {
+                path:'watch',
+                element:<Watch/>
             }
         ]
     }

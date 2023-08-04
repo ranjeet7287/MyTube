@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { YoutubeVideosApi } from "../utils/Config";
 import CardTemplate from "./CardTemplate";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const VideoCard=()=>{
 
@@ -18,8 +19,12 @@ const VideoCard=()=>{
     }
 
     return (video.length===0) ? <Shimmer/> : (
-        <div className="flex flex-wrap pt-8">
-            {video.map((video)=><CardTemplate key={video.id} info={video}/>)}
+        <div className="flex flex-wrap pt-8 items-center">
+            {video.map((video,index)=>
+            <Link to={"/watch?v="+video.id}>
+                <CardTemplate key={index} info={video}/>
+            </Link>
+            )}
         </div>
     );
 }
