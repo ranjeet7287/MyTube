@@ -18,12 +18,23 @@ const Header=()=>{
 
     const dispatch=useDispatch();
     const toggleHandler=()=>{
-        dispatch(toggleSideBar());
+        dispatch(toggleSideBar(true));
     }
 
 
     useEffect(()=>{
-        getSearchSuggestion();
+        
+        const timer= setTimeout(()=>{
+
+            getSearchSuggestion();
+
+        },200)
+
+        return()=>{
+            clearInterval(timer);
+        }
+
+
     },[SearchQuery])
 
     const getSearchSuggestion=async()=>{
@@ -36,7 +47,7 @@ const Header=()=>{
     return(
         <div className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16 z-40">
             <div className="flex gap-4 items-center">
-                <img className="w-8 cursor-pointer" src={sidebar} onClick={()=>toggleHandler()}/>
+                <img className="w-8 cursor-pointer" src={sidebar} onClick={()=>toggleHandler(true)}/>
                 <Link to="/"><img className="w-10" src={youtbeicon}/></Link>
                 <Link to="/"><p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p></Link>
             </div>
