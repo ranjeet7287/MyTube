@@ -21,7 +21,7 @@
         background-color: black;
         overflow-x: auto;
         white-space: nowrap;
-        z-index: 888;
+        z-index: 1;
     }
     .ButtonList::-webkit-scrollbar {
         display: none; 

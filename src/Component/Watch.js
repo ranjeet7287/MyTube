@@ -2,10 +2,6 @@ import { useSearchParams } from "react-router-dom";
 
 const Watch=()=>{
     const [searchParams]=useSearchParams();
-    console.log(searchParams.get('v'));
-
-
-
     return(
         <div className="pt-24 ml-4">
         <iframe 
