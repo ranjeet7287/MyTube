@@ -9,14 +9,20 @@ import { useDispatch } from "react-redux"
 import { toggleSideBar } from "../utils/AppSlice"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
+import store from "../utils/Store"
+import { cacheResults } from "../utils/SearchSlice"
 
 const Header=()=>{
 
     const [SearchQuery,SetSearchQuery]=useState("");
     const [ShowSuggestion,SetShowSuggestion]=useState([]);
     const [SuggestionBoxVisible,SetSuggestionBoxVisible]=useState(false);
-
+    
+    const searchChache=useSelector(store => store.search);
     const dispatch=useDispatch();
+
+
     const toggleHandler=()=>{
         dispatch(toggleSideBar(true));
     }
@@ -26,8 +32,11 @@ const Header=()=>{
         
         const timer= setTimeout(()=>{
 
-            getSearchSuggestion();
-
+            if(searchChache[SearchQuery]){
+                SetShowSuggestion(searchChache[SearchQuery])
+            }else{
+                getSearchSuggestion();
+            }
         },200)
 
         return()=>{
@@ -40,8 +49,11 @@ const Header=()=>{
     const getSearchSuggestion=async()=>{
         const data=await fetch("http://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=firefox&q="+SearchQuery);
         const json=await data.json();
-        console.log(json[1]);
         SetShowSuggestion(json[1]);
+        // console.log(json[1])
+        dispatch(cacheResults({
+            [SearchQuery]:json[1]
+        }))
     }
 
     return(
