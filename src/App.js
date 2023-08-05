@@ -7,11 +7,13 @@ import { Provider } from "react-redux";
 import store from "./utils/Store";
 import Body from "./Component/Body";
 import Watch from "./Component/Watch";
+import SideBar from "./Component/SideBar";
 
 const AppLayout=()=>{
     return(
         <Provider store={store}>
             <Header/>
+            <SideBar/>
             <Outlet/>
         </Provider>
     );

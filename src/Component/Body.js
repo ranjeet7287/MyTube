@@ -4,7 +4,6 @@ import Main from "./Main.js";
 const Body=()=>{
     return(
         <div>
-            <SideBar/>
             <Main/> 
         </div>
     );
