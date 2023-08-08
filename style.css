@@ -27,8 +27,8 @@
         display: none; 
     }
     .chatbox{
-        width: 17rem;
-        height: 23rem;
+        width: 20rem;
+        height: 20rem;
         margin: 1rem;
         display: flex;
         flex-direction: column-reverse;

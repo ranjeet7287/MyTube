@@ -67,11 +67,11 @@ const LiveChat=()=>{
                 placeholder="Type.."
                 value={sendMessage}
                 onChange={(e)=>setSendMessage(e.target.value)}
-                className="ml-4 px-2 py-2 m-2 bg-zinc-700 rounded-lg"
+                className="ml-4 px-6 py-2 m-2 bg-zinc-700 rounded-lg"
                 />
                 </form>
                 <button 
-                className="border-2 border-zinc-400 m-2 px-2 rounded-lg bg-zinc-700 hover:bg-gray-500"
+                className="m-2 px-4 rounded-lg bg-zinc-700 hover:bg-gray-500"
                 onClick={()=>messagesHandler()}
                 >
                 Send</button>

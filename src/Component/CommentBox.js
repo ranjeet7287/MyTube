@@ -166,7 +166,7 @@ const CommentList=({comment})=>{
 
 const CommmentBox=()=>{
     return(
-        <div className="w-[56rem] m-4 bg-zinc-900 p-4 rounded-xl ">
+        <div className="w-[50rem] m-4 bg-zinc-900 p-4 rounded-xl ">
             <p className="text-2xl">Comments :</p>
             <CommentList comment={CommentData}/>
         </div>
