@@ -26,4 +26,17 @@
     .ButtonList::-webkit-scrollbar {
         display: none; 
     }
+    .chatbox{
+        width: 17rem;
+        height: 23rem;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: scroll;
+    }
+    .chatbox::-webkit-scrollbar {
+        display: none; 
+    }
+
 }
+/* w-[17rem] h-[23rem] m-4 */
