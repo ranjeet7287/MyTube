@@ -1,8 +1,8 @@
 import sidebar from "../Assets/menubtn1.svg"
 import youtbeicon from "../Assets/youtube.svg"
 import Searchicon from "../Assets/search.svg"
-import Micicon from "../Assets/icons8.png" 
-import Notfi from "../Assets/icons8-alert-1.png" 
+import newmic from "../Assets/newmic1.png"
+import Notfi from "../Assets/notifi1.png"
 import videomakericon from "../Assets/icons8-video-50.png" 
 import usericon from "../Assets/icons8-user-48.png"
 import { useDispatch } from "react-redux"
@@ -94,8 +94,8 @@ const Header=()=>{
                </div> 
 
 
-                <div className="bg-zinc-800 p-2 rounded-3xl">
-                    <img className="w-8 " src={Micicon}/>
+                <div className="p-2">
+                    <img className="w-8 cursor-pointer" src={newmic}/>
                 </div>
             </div>
             <div className="flex gap-6">
