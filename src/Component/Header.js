@@ -57,21 +57,22 @@ const Header=()=>{
     }
 
     return(
-        <div className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16 z-40">
+        <div 
+        className="bg-black text-white flex justify-between items-center p-4 fixed w-full h-16 z-40">
             <div className="flex gap-4 items-center">
-                <img className="w-8 cursor-pointer" src={sidebar} onClick={()=>toggleHandler(true)}/>
-                <Link to="/"><img className="w-10" src={youtbeicon}/></Link>
-                <Link to="/"><p className="text-2xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p></Link>
+                <img className="w-8 cursor-pointer max-md:w-6" src={sidebar} onClick={()=>toggleHandler(true)}/>
+                <Link to="/"><img className="w-10 max-sm:hidden" src={youtbeicon}/></Link>
+                <Link to="/"><p className="text-2xl max-sm:text-xl">YouTube<sup className="text-gray-300 text-sm">IN</sup></p></Link>
             </div>
             <div className="flex items-center gap-4">
                 
                 <div>
-                    <div className="flex border-2 border-zinc-800 rounded-xl p-[0.1rem] ">
+                    <div className="flex border-2 border-zinc-800 rounded-xl p-[0.1rem] max-sm:ml-9">
                         <input
                         type="text"
                         value={SearchQuery}
                         placeholder="Search"
-                        className="bg-black text-white py-2 px-2 w-96 rounded-lg"
+                        className="bg-black text-white py-2 px-2 w-96 rounded-lg max-lg:w-60 max-sm:w-32 max-md:py-1 "
                         onChange={(e)=>SetSearchQuery(e.target.value)}
                         onFocus={()=>SetSuggestionBoxVisible(true)}
                         onBlur={()=>SetSuggestionBoxVisible(false)}
@@ -95,12 +96,12 @@ const Header=()=>{
 
 
                 <div className="p-2">
-                    <img className="w-8 cursor-pointer" src={newmic}/>
+                    <img className="w-8 cursor-pointer max-sm:hidden" src={newmic}/>
                 </div>
             </div>
-            <div className="flex gap-6">
-                <img className="w-8" src={Notfi}/>
-                <img className="w-8" src={videomakericon}/>
+            <div className="flex gap-6 max-sm:hidden">
+                <img className="w-8 " src={Notfi}/>
+                <img className="w-8 " src={videomakericon}/>
                 <img className="w-8" src={usericon}/>
             </div>
         </div>
