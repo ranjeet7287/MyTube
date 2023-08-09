@@ -34,9 +34,60 @@
         flex-direction: column-reverse;
         overflow: scroll;
     }
+    @media screen and (max-width:1020px){
+        .chatbox{
+            width: 53rem;
+        }
+    }
+    @media screen and (max-width:763px){
+        .chatbox{
+            width: 38rem;
+        }
+    }
+    @media screen and (max-width:638px){
+        .chatbox{
+            width: 15rem;
+        }
+    }
     .chatbox::-webkit-scrollbar {
         display: none; 
     }
+    .iframe{
+        border-radius: 20px;
+        width: 49rem;
+        height: 27rem;
+    }
+    @media screen and (max-width:1020px){
+        .iframe{
+            width:55rem;
+        }
+    }
+    @media screen and (max-width:820px){
+        .iframe{
+            width:38rem;
+        }
+    }
+    @media screen and (max-width:770px){
+        .iframe{
+            width:38rem;
+            height: 20rem;
+        }
+    }
+    @media screen and (max-width:500px){
+        .iframe{
+            width:25rem;
+            height: 20rem;
+        }
+    }
+    @media screen and (max-width:400px){
+        .iframe{
+            width: 18rem;
+            height: 15rem;
+            border: 50px;
+        }
+    }
+
+
 
 }
-/* w-[17rem] h-[23rem] m-4 */
+/* rounded-xl shadow-2xl w-[49rem] h-[27rem] max-lg:w-[55rem] max-md:w-[40rem] max-md:h-[20rem] max-sm:w-[18rem] max-sm:h-[15rem] */

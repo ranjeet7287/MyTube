@@ -157,7 +157,7 @@ const CommentList=({comment})=>{
     return comment.map((comments,index)=>(
         <div key={index} >
             <Comment data={comments}/>
-            <div className="ml-20  border-l-2 border-l-zinc-700 p-2">
+            <div className="ml-20  border-l-2 border-l-zinc-700 p-2 max-md:ml-10">
                 <CommentList comment={comments.reply}/>
             </div>
         </div>
@@ -166,7 +166,7 @@ const CommentList=({comment})=>{
 
 const CommmentBox=()=>{
     return(
-        <div className="w-[50rem] m-4 bg-zinc-900 p-4 rounded-xl ">
+        <div className="w-[50rem] m-4 bg-zinc-900 p-4 rounded-xl max-sm:w-[20rem]">
             <p className="text-2xl">Comments :</p>
             <CommentList comment={CommentData}/>
         </div>

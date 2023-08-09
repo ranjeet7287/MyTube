@@ -20,11 +20,14 @@ const RecoCard=()=>{
     return(
         <div className="pt-8 items-center">
             <p className="ml-8 mb-4 text-2xl">Recommended</p>
-            {video.map((video,index)=>
-            <Link to={"/watch?v="+video.id} key={video.id}>
-                <RecoCardTemp info={video}/>
-            </Link>
-            )}
+            <div className="max-lg:flex max-lg:flex-wrap max-lg:justify-center">
+                {video.map((video,index)=>
+                <Link to={"/watch?v="+video.id} key={video.id}>
+                    <RecoCardTemp info={video}/>
+                </Link>
+                )}
+            </div>
+
         </div>
     );
 }

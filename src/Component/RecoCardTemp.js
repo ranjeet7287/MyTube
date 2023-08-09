@@ -5,7 +5,7 @@ const RecoCardTemp=({info})=>{
     const {viewCount,likeCount,favoriteCount,commentCount}=statistics;
     return(
         <div>
-            <div className="w-[22rem]  flex border-2 border-zinc-700 rounded-lg cursor-pointer ml-8 my-2 gap-3 p-4 text-white bg-black shadow-lg hover:scale-105 ease-in duration-100 items-center">
+            <div className="w-[22rem]  flex border-2 border-zinc-700 rounded-lg cursor-pointer ml-8 my-2 gap-3 p-4 text-white bg-black shadow-lg hover:scale-105 ease-in duration-100 items-center max-sm:w-[15rem]">
              <div>
                  <img className="" alt="thumnails" src={thumbnails.medium.url}/>
              </div>
