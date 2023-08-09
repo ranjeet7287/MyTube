@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 const AsideBar=()=>{
     return(
-        <div className='bg-black text-white p-4 h-full fixed flex flex-col items-center gap-16 text-sm w-[5.5rem]'>
+        <div className='bg-black text-white p-4 h-full fixed flex flex-col items-center gap-16 text-sm w-[5.5rem] max-md:hidden'>
             <div><Link to="/"><img className='w-6 cursor-pointer ml-2' src={home}/>Home</Link></div>
             <div><img className='w-6 cursor-pointer ml-2' src={shotrs}/>Shorts</div>
             <div className='ml-3'><img className='w-6 ml-6 cursor-pointer' src={Subscriptions}/>Subscriptions</div>

@@ -19,7 +19,7 @@ const VideoCard=()=>{
     }
 
     return (video.length===0) ? <Shimmer/> : (
-        <div className="flex flex-wrap pt-8 items-center">
+        <div className="flex flex-wrap pt-8 items-center justify-center">
             {video.map((video,index)=>
             <Link to={"/watch?v="+video.id} key={video.id}>
                 <CardTemplate info={video}/>
