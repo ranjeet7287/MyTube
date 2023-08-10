@@ -47,7 +47,7 @@ const Header=()=>{
     },[SearchQuery])
 
     const getSearchSuggestion=async()=>{
-        const data=await fetch("https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=firefox&q="+SearchQuery);
+        const data=await fetch("https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=firefox&q="+SearchQuery,{ mode: 'no-cors'});
         const json=await data.json();
         SetShowSuggestion(json[1]);
         // console.log(json[1])
