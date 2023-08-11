@@ -18,11 +18,25 @@ Features include seamless page routing, a search box with efficient search sugge
     <li>Incorporates a search box to allow users to search for videos or content.</li>
     <li>Implements an efficient search suggestion system, providing real-time suggestions as users type.</li>
   </ul>
-  <h2>Live Chat Box using API Polling:</h2>
+  <h2>3. Live Chat Box using API Polling:</h2>
   <ul>
     <li>Integrates a live chat box for real-time communication among users.</li>
     <li>Utilizes API polling to fetch new messages and updates at regular intervals.</li>
   </ul>
+  <h2>4. Comment System with Nested Comments:</h2>
+  <ul>
+    <li>Provides a comment system for users to engage in discussions about videos.</li>
+    <li>Supports nested comments, allowing for organized and threaded conversations</li>
+  </ul>
+  <h2>5. Responsive UI Design with Tailwind CSS:</h2>
+  <ul>
+    <li>Adopts Tailwind CSS for responsive and consistent UI design across various devices.</li>
+  </ul>
+  <h2>6. State Management with Redux:</h2>
+  <ul>
+    <li>Utilizes Redux for efficient state management, ensuring seamless data flow and updates across components.</li>
+  </ul>
+  <h2></h2>
 </div>
 
  
