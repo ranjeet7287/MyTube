@@ -36,13 +36,13 @@ Features include seamless page routing, a search box with efficient search sugge
   <ul>
     <li>Utilizes Redux for efficient state management, ensuring seamless data flow and updates across components.</li>
   </ul>
-  <h2></h2>
+  <h2>7. Integration with External APIs:</h2>
+  <ul>
+    <li>Integrates external APIs for video content, search suggestions, and real-time chat functionality</li>
+  </ul>
 </div>
-
- 
-
 <img width="946" alt="Screenshot 2023-08-11 144345" src="https://github.com/ranjeet7287/MyTube/assets/116716540/64b87eaa-2081-4554-af79-91d02d059e82">
 <img width="947" alt="Screenshot 2023-08-11 144559" src="https://github.com/ranjeet7287/MyTube/assets/116716540/86a87d68-5d82-4634-b227-8ff06c92ee2c">
 <img width="946" alt="Screenshot 2023-08-11 144455" src="https://github.com/ranjeet7287/MyTube/assets/116716540/c1eb47f9-0d64-4938-b7e2-fc2d9584efb5">
-
+<h3>Project showcases a comprehensive set of features that deliver a YouTube-like experience, encompassing everything from video playback and recommendation to interactive communication and content creation.</h3>
 
